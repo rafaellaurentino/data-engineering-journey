@@ -10,10 +10,10 @@ Rank each employee's customers by how much they've spent
 
 WITH employee_customer_rank AS (
                     SELECT
-                        e.first_name,
-                        e.last_name,
-                        c.first_name,
-                        c.last_name,
+                        e.first_name AS employee_firstname,
+                        e.last_name AS employee_lastname,
+                        c.first_name AS customer_firstname,
+                        c.last_name AS customer_lastname,
                         SUM(i.total) AS total,
                         RANK() OVER(PARTITION BY e.employee_id ORDER BY SUM(i.total) DESC) AS rank_customers
                     FROM employee e
