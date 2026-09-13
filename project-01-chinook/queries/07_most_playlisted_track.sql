@@ -49,6 +49,7 @@ WITH RankedTracks AS (
 )
 SELECT track_id, name, total, rnk
 FROM RankedTracks
+WHERE rnk = 1;
 
 
 /*
@@ -65,3 +66,4 @@ Universal & Non-Intrusive Appeal: It relies less on controversial lyrics or pola
 
 High Replay Value: It avoids fatigue over repeated listens, encouraging users to leave
 the track in their personal libraries or auto-generated queues indefinitely.
+*/
