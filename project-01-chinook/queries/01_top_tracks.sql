@@ -35,13 +35,17 @@ track, album and artist
 */
 
 SELECT 
+    t.track_id,
     t.name AS TrackName,
     ar.name AS ArtistName,
     SUM(il.unit_price * il.quantity) AS Revenue
 FROM invoice_line il
-JOIN track t ON il.track_id = t.track_id
-JOIN album a ON t.album_id = a.album_id
-JOIN artist ar ON a.artist_id = ar.artist_id
+JOIN track t 
+    ON il.track_id = t.track_id
+JOIN album a 
+    ON t.album_id = a.album_id
+JOIN artist ar 
+    ON a.artist_id = ar.artist_id
 GROUP BY t.track_id, t.name, ar.name
 ORDER BY Revenue DESC
 LIMIT 10;

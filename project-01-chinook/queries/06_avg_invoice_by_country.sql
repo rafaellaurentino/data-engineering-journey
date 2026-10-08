@@ -18,3 +18,11 @@ FROM invoice i
 GROUP BY i.billing_country
 ORDER BY avg DESC;
 -- The country with highest average order value is chile with 6.66
+
+
+SELECT
+    i.billing_country,
+    SUM(i.total) AS total_revenue
+FROM invoice i
+GROUP BY i.billing_country
+ORDER BY total_revenue DESC;
