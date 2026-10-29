@@ -1,0 +1,1 @@
+In our first query we checked our data to see if there were any incositency like trips lasting less than a minute and more than a day. But probably the Citi Bike already removes trips with under a minute
