@@ -1,0 +1,36 @@
+# Ignorar configurações do VS Code
+.vscode/
+
+# Ignorar datasets grandes
+project-02-olist/data/olist_dataset/
+
+# Ignorar arquivos de banco de dados
+project-02-olist/database/
+
+# Ignorar arquivos temporários e logs
+*.log
+*.tmp
+
+# Ignorar arquivos Python compilados
+__pycache__/
+*.pyc
+
+# Ignorar checkpoints de Jupyter
+.ipynb_checkpoints/
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar a pasta venv
+.venv/
+
+#ignorar os arquivos dentro dessa pasta
+project-03-citibike/data*
+!project-03-citibike/data/.gitkeep
+
+project-03-citibike/database*
+!project-03-citibike/database;gitkeep
+
+*.duckdb
+*.duckdb.wal
